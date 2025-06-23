@@ -7,10 +7,23 @@ html,
   position: relative;
 }
 
+:root {
+  --light-purple: #cd5ff8;
+  --primary-purple: #6200ea;
+  --electric-purple: #8d34ec;
+  --accent-purple: #87209e;
+  --soft-purple: #8a49a8;
+}
+
 #home h1 {
   font-size: 5rem !important;
   color: white;
   text-align: left;
+}
+
+.spanText {
+  color: var(--light-purple);
+  font-weight: 600;
 }
 
 #home .spanText {
@@ -18,7 +31,7 @@ html,
 }
 
 #home .spanText:hover {
-  color: #03dac6 !important;
+  color: var(--primary-purple) !important;
 }
 
 #home h2 {
@@ -41,16 +54,11 @@ h2 {
 h6 {
   font-size: 1.4rem !important;
   font-weight: 600 !important;
-  color: #87209e !important;
+  color: var(--accent-purple) !important;
 }
 
 p {
   color: white;
-}
-
-.spanText {
-  color: #cd5ff8;
-  font-weight: 600;
 }
 
 /* Preloader */
@@ -137,7 +145,7 @@ p {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: var(--electric-purple) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -219,21 +227,21 @@ p {
   z-index: 1;
 }
 
-.navbar-nav .nav-item a::after {
+.navbar-nav .nav-item a:not(.no-hover-underline)::after {
   content: "";
   position: relative;
   display: block;
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: var(--primary-purple);
   bottom: 1px;
   left: 0;
   z-index: -1;
   transition: all 0.3s ease-out 0s;
 }
 
-.navbar-nav .nav-item a:hover::after {
+.navbar-nav .nav-item a:not(.no-hover-underline):hover::after {
   width: 100%;
 }
 
@@ -290,7 +298,7 @@ p {
 
 .homeSocialIcons {
   position: relative !important;
-  color: #cd5ff8;
+  color: var(--light-purple);
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -306,8 +314,8 @@ p {
 }
 
 .homeSocialIcons:hover {
-  box-shadow: 0 0 15px #cd5ff8;
-  text-shadow: 0 0 2px #87209e;
+  box-shadow: 0 0 15px var(--light-purple);
+  text-shadow: 0 0 2px var(--accent-purple);
   transform: scale(1.05);
 }
 
@@ -330,7 +338,7 @@ p {
 /* Typewriter */
 
 .Typewriter__cursor {
-  color: #cd5ff8; /* Cursor color */
+  color: var(--light-purple); /* Cursor color */
   font-weight: 100;
   animation: blink 1s infinite;
 }
@@ -368,12 +376,12 @@ p {
 @keyframes flash-purple-glow {
   0%,
   100% {
-    color: #8d34ec; /* Dark purple */
-    text-shadow: 0 0 4px #8d34ec;
+    color: var(--soft-purple);
+    text-shadow: 0 0 4px var(--accent-purple);
   }
   50% {
-    color: #cd5ff8; /* Light purple */
-    text-shadow: 0 0 8px #cd5ff8, 0 0 16px #cd5ff8;
+    color: var(--light-purple);
+    text-shadow: 0 0 8px var(--primary-purple), 0 0 16px var(--light-purple);
   }
 }
 
@@ -489,7 +497,7 @@ p {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 2px solid var(--soft-purple);
   position: relative;
 }
 
@@ -526,7 +534,7 @@ p {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid var(--soft-purple);
 }
 
 .like-item {
@@ -601,20 +609,20 @@ p {
   text-decoration: none !important;
   line-height: 1;
   color: white !important;
-  border: 1px solid #87209e;
+  border: 1px solid var(--primary-purple);
   border-radius: 6px;
 }
 
 .resumeButton:hover {
   transform: translateY(2px);
-  background-color: #03dac6 !important;
-  border: 1px solid #03dac6;
+  background-color: var(--primary-purple) !important;
+  border: 1px solid var(--primary-purple);
   color: white !important;
 }
 
 /* Primary Button */
 .primaryButton {
-  background-color: #6200ea;
+  background-color: var(--primary-purple);
   color: white;
   padding: 10px 24px;
   border: none;
@@ -623,28 +631,30 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  text-decoration: none !important;
 }
 
 .primaryButton:hover {
   background-color: transparent !important;
-  border: 1px solid #6200ea;
-  box-shadow: #6200ea 0px 15px 15px -10px;
+  border: 1px solid var(--primary-purple);
+  box-shadow: var(--primary-purple) 0px 15px 15px -10px;
+  text-decoration: none !important;
 }
 
 /* Outline Button */
 .outlineButton {
   background: transparent;
-  border: 1px solid #6200ea;
+  border: 1px solid var(--primary-purple);
   border-radius: 6px;
   color: white;
   text-decoration: none;
   padding: 10px 24px;
   transition: 0.3s ease;
-  box-shadow: #6200ea 0px 15px 15px -10px;
+  box-shadow: var(--primary-purple) 0px 15px 15px -10px;
 }
 
 .outlineButton:hover {
-  background-color: #6200ea;
+  background-color: var(--primary-purple);
   color: white;
   box-shadow: none;
 }

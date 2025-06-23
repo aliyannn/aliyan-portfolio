@@ -25,7 +25,7 @@ function Home() {
                                 <Typewrite />
                             </div>
 
-                            <div className='text-left flex gap-4 pt-20'>
+                            <div className='text-left flex gap-4 pt-2'>
                                 <Button variant='primary' href="https://www.linkedin.com/in/allygohar/">
                                     Connect on Linkedin
                                     <TbArrowUpRight />

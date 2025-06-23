@@ -35,7 +35,7 @@ function NavBar() {
         >
             <Container>
                 <Navbar.Brand href="/" className="d-flex">
-                    <span className="text-purple-600 font-bold text-3xl">aliyan.</span>
+                    <span className="text-[var(--light-purple)] font-bold text-3xl">aliyan.</span>
                 </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"
@@ -74,11 +74,9 @@ function NavBar() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Button variant="navbar" href={resumePDF} download>
-
+                            <Button variant="navbar" href={resumePDF} className="no-hover-underline" download>
                                 Resume
                                 <TbArrowUpRight />
-
                             </Button>
                         </Nav.Item>
                     </Nav>
