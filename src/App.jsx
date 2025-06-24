@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer"
 import ScrollToTop from "./components/ScrollToTop"
+import ThreeBackground from "./components/ThreeBackground"
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,6 +30,7 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="text-center" id={load ? "no-scroll" : "scroll"}>
+        <ThreeBackground />
         <NavBar />
         <ScrollToTop />
         <Routes>
