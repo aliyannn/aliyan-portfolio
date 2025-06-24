@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect'
 
 function Typewrite() {
     return (
-        <div className="text-4xl font-bold font-mono inline-block" style={{ color: '#cd5ff8' }}>
+        <div className="text-4xl font-bold font-mono inline-block typewriter" style={{ color: '#cd5ff8' }}>
             <Typewriter
                 options={{
                     strings: [

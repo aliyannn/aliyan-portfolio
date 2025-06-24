@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import myImg from "../../assets/aliyangohar image.png"
 import Tilt from "react-parallax-tilt"
 import {
     FaLinkedin,
@@ -10,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Intro() {
     return (
-        <Container fluid className='pt-30'>
+        <Container fluid className='pt-30' id='intro'>
             <Container>
                 <Row className='text-white items-center'>
                     <Col md={7}>
@@ -31,13 +32,14 @@ function Intro() {
 
                     <Col md={5} className='p-0 flex justify-center items-center'>
                         <Tilt>
-                            <DotLottieReact
+                            <img src={myImg} alt="aliyan gohar" width={300} height={300} />
+                            {/* <DotLottieReact
                                 src="https://lottie.host/eed0e8c3-4aad-47ca-b576-309a77d3eb2f/iaxGTjlLAc.lottie"
                                 loop
                                 autoplay
                                 height={6000}
                                 width={6000}
-                            />
+                            /> */}
                         </Tilt>
                     </Col>
                 </Row>
@@ -45,15 +47,15 @@ function Intro() {
                     <Col md={12}>
                         <h2>FIND ME ON</h2>
                         <p>Feel free to <span className='spanText'>connect</span> with me</p>
-                        <ul className='home-about-social-links'>
+                        <ul className='homeSocialIconsList'>
                             <li className='socialIcons'>
                                 <a
                                     href="https://www.linkedin.com/in/allygohar/"
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className='w-[60px] h-[60px] flex items-center justify-center rounded-full bg-[#2b0037] shadow-[0_0_10px_rgba(205,95,248,0.3)] hover:shadow-[0_0_20px_#cd5ff8] hover:scale-105 transition-all duration-300 glow-animate'
+                                    className='homeSocialIcons glow-animate'
                                 >
-                                    <FaLinkedin className='text-[#cd5ff8] text-[1.8em] transition-all duration-300' />
+                                    <FaLinkedin className='iconStyle' />
                                 </a>
                             </li>
                             <li className='socialIcons'>
@@ -61,9 +63,9 @@ function Intro() {
                                     href="https://github.com/aliyannn"
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className='w-[60px] h-[60px] flex items-center justify-center rounded-full bg-[#2b0037] shadow-[0_0_10px_rgba(205,95,248,0.3)] hover:shadow-[0_0_20px_#cd5ff8] hover:scale-105 transition-all duration-300 glow-animate'
+                                    className='homeSocialIcons glow-animate'
                                 >
-                                    <FaGithub className='text-[#cd5ff8] text-[1.8em] transition-all duration-300' />
+                                    <FaGithub className='iconStyle' />
                                 </a>
                             </li>
                             <li className='socialIcons'>
@@ -71,9 +73,9 @@ function Intro() {
                                     href="https://x.com/aliyan_gohar"
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className='w-[60px] h-[60px] flex items-center justify-center rounded-full bg-[#2b0037] shadow-[0_0_10px_rgba(205,95,248,0.3)] hover:shadow-[0_0_20px_#cd5ff8] hover:scale-105 transition-all duration-300 glow-animate'
+                                    className='homeSocialIcons glow-animate'
                                 >
-                                    <FaXTwitter className='text-[#cd5ff8] text-[1.8em] transition-all duration-300' />
+                                    <FaXTwitter className='iconStyle' />
                                 </a>
                             </li>
                         </ul>

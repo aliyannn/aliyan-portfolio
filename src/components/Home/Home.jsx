@@ -21,7 +21,7 @@ function Home() {
                                 <span className='wave' role='img'>👋🏻</span>
                             </h2>
 
-                            <div className='text-left py-10'>
+                            <div className='text-left py-10 typewriter'>
                                 <Typewrite />
                             </div>
 
