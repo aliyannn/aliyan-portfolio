@@ -8,9 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.14.1",
@@ -21,7 +19,6 @@
     "@tailwindcss/vite": "^4.1.10",
     "bootstrap": "^5.3.6",
     "framer-motion": "^12.18.1",
-    "gh-pages": "^6.3.0",
     "lottie-react": "^2.4.1",
     "pdfjs-dist": "^5.3.31",
     "react": "^19.1.0",
