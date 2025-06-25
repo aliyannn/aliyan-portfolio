@@ -49,7 +49,7 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://lohit.is-a.dev](https://lohit.is-a.dev)
+Experience the live portfolio at [https://aliyannn.vercel.app/](https://aliyannn.vercel.app/)
 
 ## 📸 Screenshots
 
@@ -62,7 +62,7 @@ Experience the live portfolio at [https://lohit.is-a.dev](https://lohit.is-a.dev
 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/lohitkolluri/Portfolio
+git clone https://github.com/aliyannn/aliyan-portfolio
 ```
 
 2️⃣ Navigate to project directory:
@@ -85,7 +85,7 @@ npm run dev
 
 5️⃣ Open in browser:
 
-- Visit [http://localhost:3000](http://localhost:3000)
+- Visit [http://localhost:5173](http://localhost:5173)
 
 ## 💻 Tech Stack
 
