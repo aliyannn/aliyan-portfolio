@@ -13,9 +13,9 @@
 [![GitHub license](https://img.shields.io/github/license/lohitkolluri/Portfolio?style=flat-square)](LICENSE)
 [![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Flohit.is-a.dev)](https://lohit.is-a.dev)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?style=flat-square&logo=react)](https://reactjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Ready-F7DF1E?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-<p align="center">A modern, responsive portfolio website showcasing professional experience, projects, and skills. Built with React, Next.js, and TypeScript, featuring smooth animations and dynamic content. ✨</p>
+<p align="center">A modern, responsive portfolio website showcasing professional experience, projects, and skills. Built with React, Three.js, and JavaScript, featuring smooth animations and dynamic content. ✨</p>
 
 </div>
 
