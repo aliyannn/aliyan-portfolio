@@ -14,7 +14,7 @@ function Home() {
                 <Container>
                     <Row className='align-items-center'>
                         <Col md={7}>
-                            <h1>Hello, I'm</h1>
+                            <h1>Hi, I'm</h1>
 
                             <h2>
                                 <strong className='spanText'> Aliyan Gohar</strong>
