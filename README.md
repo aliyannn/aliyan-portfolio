@@ -111,6 +111,10 @@ npm run dev
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg" width="48" height="48" alt="Three.js" />
       <br>Three.js
     </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" />
+      <br>Vercel
+    </td>
   </tr>
 </table>
 
