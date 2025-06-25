@@ -10,13 +10,13 @@ function ProjectCards(props) {
             <Card.Body>
                 <Card.Title className="text-white">{props.title}</Card.Title>
 
-                <div className="d-flex flex-wrap gap-2 mb-2">
+                <div className="flex flex-wrap justify-center text-center gap-4 my-4">
                     {props.images?.map((imageSrc, index) => (
                         <img
                             key={index}
                             src={imageSrc}
                             alt={`project-${index}`}
-                            style={{ width: "auto", height: "auto", objectFit: "cover"}}
+                            className="w-[10%] h-[auto] object-contain"
                         ></img>
                     ))}
                 </div>

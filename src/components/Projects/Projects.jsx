@@ -11,14 +11,18 @@ function Projects() {
                     <Col md={4} className="projectCard">
                         <ProjectCards
                             img={chatify}
-                            title="Chatify"
+                            title="Portfolio"
                             images={[
                                 "vite.svg",
-                                "react.svg"
+                                "react.svg",
+                                "javascript.svg",
+                                "threejs.svg",
+                                "tailwind.svg",
+                                "vercel.png"
                             ]}
-                            text="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-                            ghLink
-                            demoLink
+                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
+                            ghLink="https://github.com/aliyannn/aliyan-portfolio"
+                            demoLink="https://aliyannn.vercel.app/"
                         />
                     </Col>
                     <Col md={4} className="projectCard">
