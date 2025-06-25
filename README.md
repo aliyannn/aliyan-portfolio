@@ -54,7 +54,7 @@ Experience the live portfolio at [https://aliyannn.vercel.app/](https://aliyannn
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="public/etc/image.png" alt="Hero Page" width="600px"/>
+  <img src="/portfolioHero" alt="Hero Page" width="600px"/>
 </div>
 
 ## 🛠️ Installation
