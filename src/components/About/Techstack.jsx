@@ -4,6 +4,7 @@ import {
     DiJavascript1,
     DiNodejs
 } from "react-icons/di";
+import { TbBrandThreejs } from "react-icons/tb";
 
 import {
     FaGithub,
@@ -27,6 +28,9 @@ function Techstack() {
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <DiNodejs />
+            </Col>
+            <Col xs={4} md={2} className="techIcons">
+                <TbBrandThreejs />
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <CgCPlusPlus />

@@ -45,7 +45,7 @@ function Intro() {
                 </Row>
                 <Row className='text-center text-white py-20'>
                     <Col md={12}>
-                        <h2>FIND ME ON</h2>
+                        <h2 className='heading text-center'>FIND ME ON</h2>
                         <p>Feel free to <span className='spanText'>connect</span> with me</p>
                         <ul className='homeSocialIconsList'>
                             <li className='socialIcons'>

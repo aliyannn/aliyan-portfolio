@@ -14,7 +14,7 @@ function About() {
                     </Col>
 
                 </Row>
-                <h2 className="pt-20 pb-10 heading text-center">My <strong className="spanText">Tech Stack</strong></h2>
+                <h2 className="lg:pt-20 md:pt-10 pb-10 heading text-center">My <strong className="spanText">Tech Stack</strong></h2>
                 <Techstack />
                 <h2 className="pt-20 pb-10 heading text-center">My <strong className="spanText">Tool Stack</strong></h2>
                 <Toolstack />

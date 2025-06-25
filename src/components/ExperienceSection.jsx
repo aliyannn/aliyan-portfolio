@@ -38,8 +38,8 @@ const experiences = [
 const ExperienceSection = () => {
     return (
         <div className="text-white py-16 px-4">
-            <div className="text-center pb-10">
-                <h1 style={{ fontSize: '58px', textShadow: '1px 1px 6px white' }}>Work <span className="spanText">Experience</span></h1>
+            <div className="text-center pb-10 workExperience">
+                <h1 className="">Work <span className="spanText">Experience</span></h1>
                 <p className="text-xl">Some of my recent work experience</p>
             </div>
             <VerticalTimeline>
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
                             />
                         }
                     >
-                        <h3 className="vertical-timeline-element-title text-lg font-bold">{exp.title}</h3>
+                        <h3 className="vertical-timeline-element-title">{exp.title}</h3>
                         <h5 className="vertical-timeline-element-subtitle" style={{ color: "var(--light-purple)", fontSize: '20px' }}>{exp.company}</h5>
                         <p className="text-sm">{exp.description}</p>
                     </VerticalTimelineElement>

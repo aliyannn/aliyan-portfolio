@@ -448,6 +448,13 @@ p {
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 
+/* Work Experience */
+
+.workExperience h1 {
+  font-size: 58px;
+  text-shadow: 1px 3px 12px var(--electric-purple);
+}
+
 /* Projects */
 
 .projectCard {
@@ -556,8 +563,10 @@ p {
     font-size: 2.5rem !important;
   }
 
-  #home {
-    padding-top: 120px !important;
+  #home h2 {
+    font-size: 1.8rem !important;
+    display: flex;
+    align-items: center;
   }
 
   #intro {
@@ -614,5 +623,13 @@ p {
   img {
     width: 250px !important;
     height: 250px !important;
+  }
+  
+  .workExperience h1 {
+    font-size: 2.28rem !important;
+  }
+
+  .workExperience p {
+    font-size: 14px;
   }
 }
