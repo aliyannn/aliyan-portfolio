@@ -91,21 +91,25 @@ npm run dev
 
 <table align="center">
   <tr>
+     <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Vite" />
+      <br>Vite
+    </td>
     <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
       <br>React
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Next.js" />
-      <br>Next.js
+      <img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" />
+      <br>JavaScript
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
-      <br>TypeScript
+      <img src="https://skillicons.dev/icons?i=tailwindcss" width="48" height="48" alt="TailwindCSS" />
+      <br>TailwindCSS
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=scss" width="48" height="48" alt="SCSS" />
-      <br>SCSS
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg" width="48" height="48" alt="Three.js" />
+      <br>Three.js
     </td>
   </tr>
 </table>
