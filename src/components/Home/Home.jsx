@@ -10,16 +10,14 @@ import Tilt from "react-parallax-tilt"
 function Home() {
     return (
         <section>
-            <Container fluid className='pt-40' id='home'>
+            <Container fluid className='pt-30' id='home'>
                 <Container>
                     <Row className='align-items-center'>
                         <Col md={7}>
                             <h1>Hi, I'm  <strong className='spanText'> Aliyan</strong>
                                 <span className='wave' role='img'>👋🏻</span></h1>
 
-                            <div className='text-left py-10 typewriter'>
-                                <Typewrite />
-                            </div>
+                            <div className='flex py-10 typewriter'><h2>I'm a&nbsp;</h2><Typewrite /></div>
 
                             <div className='text-left flex gap-4 pt-2'>
                                 <Button variant='primary' href="https://www.linkedin.com/in/allygohar/">

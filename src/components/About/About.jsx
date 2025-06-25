@@ -6,7 +6,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function About() {
     return (
-        <Container fluid className='pt-30 pb-20 text-justify'>
+        <Container fluid className='pt-20 pb-20 text-justify'>
             <Container>
                 <Row className='justify-center'>
                     <Col md={12} className='justify-center'>
