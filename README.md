@@ -68,7 +68,7 @@ git clone https://github.com/aliyannn/aliyan-portfolio
 2️⃣ Navigate to project directory:
 
 ```bash
-cd Portfolio
+cd aliyan-portfolio
 ```
 
 3️⃣ Install dependencies:
@@ -96,7 +96,7 @@ npm run dev
       <br>React
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+      <img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Next.js" />
       <br>Next.js
     </td>
     <td align="center" width="96">
