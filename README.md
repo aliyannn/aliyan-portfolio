@@ -10,6 +10,19 @@
   <a href="#tech-stack">Tech Stack</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/aliyannn/aliyan-portfolio/stargazers">
+    <img src="https://img.shields.io/github/stars/aliyannn/aliyan-portfolio?color=yellow&style=flat-square" alt="GitHub Stars" />
+  </a>
+  <a href="https://github.com/aliyannn/aliyan-portfolio/network/members">
+    <img src="https://img.shields.io/github/forks/aliyannn/aliyan-portfolio?color=blue&style=flat-square" alt="GitHub Forks" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=aliyannn&style=flat-square&color=green" alt="Profile Views" />
+  <a href="https://vercel.com/aliyannn/aliyan-portfolio">
+    <img src="https://img.shields.io/vercel/status?style=flat-square&project=aliyan-portfolio&color=brightgreen&label=vercel" alt="Vercel Status" />
+  </a>
+</p>
+
 [![GitHub license](https://img.shields.io/github/license/lohitkolluri/Portfolio?style=flat-square)](LICENSE)
 [![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Flohit.is-a.dev)](https://lohit.is-a.dev)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?style=flat-square&logo=react)](https://reactjs.org)
