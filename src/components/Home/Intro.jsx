@@ -20,10 +20,12 @@ function Intro() {
                         </h2>
                         <div className='leading-10 text-[16px] text-justify'>
                             <p>
-                                I am a Computer Science student at SRM University and multilingual speaker with a passion for ethical hacking,
-                                artificial intelligence, and neural language processing. I am looking to join a company that values innovation, collaboration,
-                                and continuous learning and am confident that my enthusiasm and drive will help me succeed in any role that leverages my passion
-                                for technology.
+                                Hi, I'm Aliyan, and I am passionate about creating intuitive, user-friendly web
+                                applications that provide a seamless experience for users. I am always eager to
+                                learn new technologies and stay up-to-date with industry trends. I am a team player
+                                and enjoy collaborating with other developers to find creative solutions to
+                                challenging problem. I'm open to Job opportunities. If you think my skills are
+                                relevant to your job requirements then do contact me.
                             </p>
                         </div>
                     </Col>

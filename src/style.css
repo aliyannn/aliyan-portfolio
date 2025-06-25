@@ -45,11 +45,12 @@ html,
   font-size: 5rem !important;
   color: white;
   text-align: left;
+  font-weight: bold;
 }
 
 #home h2 {
   text-align: left !important;
-  font-size: 5rem !important;
+  font-size: 2rem !important;
 }
 
 h2 {
@@ -366,6 +367,10 @@ p {
   }
 }
 
+.typewriterHeading {
+  color: black;
+}
+
 /* Ocen Wave SVG Transition */
 
 .lottieWave {
@@ -548,10 +553,6 @@ p {
 
 @media screen and (max-width: 767px) {
   #home h1 {
-    font-size: 1.4rem !important;
-  }
-
-  #home h2 {
     font-size: 2.5rem !important;
   }
 

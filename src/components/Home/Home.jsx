@@ -14,12 +14,8 @@ function Home() {
                 <Container>
                     <Row className='align-items-center'>
                         <Col md={7}>
-                            <h1>Hi, I'm</h1>
-
-                            <h2>
-                                <strong className='spanText'> Aliyan Gohar</strong>
-                                <span className='wave' role='img'>👋🏻</span>
-                            </h2>
+                            <h1>Hi, I'm  <strong className='spanText'> Aliyan</strong>
+                                <span className='wave' role='img'>👋🏻</span></h1>
 
                             <div className='text-left py-10 typewriter'>
                                 <Typewrite />
