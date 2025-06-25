@@ -1,12 +1,58 @@
-# React + Vite
+# 💼 Aliyan Gohar - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated **developer portfolio** built using **React**, **Vite**, **Tailwind CSS**, **Three.js**, and **Framer Motion**. It showcases my experience, skills, projects, and contact details — with smooth transitions and 3D visual effects.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+👉 [https://aliyannn.github.io/aliyan-portfolio/](https://aliyannn.github.io/aliyan-portfolio/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ **React 19**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS** + Bootstrap
+- 🌌 **Three.js** (interactive 3D background and animations)
+- 🌀 **Framer Motion** (smooth animations)
+- 📄 **React PDF Renderer** (for resume viewing)
+- 🔤 **Typewriter Effect** (typing animation)
+- 🌐 **React Router DOM**
+- 📦 **Deployed via GitHub Pages**
+
+---
+
+## 🚀 Features
+
+- ✅ Fully responsive for mobile, tablet, and desktop
+- ✅ 3D animated starfield + orbiting planets + comet (Three.js)
+- ✅ Timeline-based work experience with company logos
+- ✅ Downloadable resume using `react-pdf`
+- ✅ Projects grid with GitHub and live demo links
+- ✅ Smooth animations using `framer-motion`
+- ✅ Dark mode support (in progress or planned)
+- ✅ React Router-based routing
+
+---
+
+## 📸 Screenshots
+
+> Replace these placeholders with real screenshots from your app:
+
+### 🖥️ Hero Section
+
+![Hero](https://via.placeholder.com/900x400.png?text=Hero+Section)
+
+### 🛠️ Experience Timeline
+
+![Experience](https://via.placeholder.com/900x400.png?text=Work+Experience)
+
+### 💻 Projects Grid
+
+![Projects](https://via.placeholder.com/900x400.png?text=Projects+Section)
+
+---
+
+## 📁 Folder Structure
