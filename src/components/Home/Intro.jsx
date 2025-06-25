@@ -15,17 +15,15 @@ function Intro() {
             <Container>
                 <Row className='text-white items-center'>
                     <Col md={7}>
-                        <h2 className='heading uppercase pb-4'>
-                            <strong className='flash-purple'>About Me</strong>
+                        <h2 className='heading uppercase pb-4'>Get to
+                            <strong className='flash-purple'> Know Me</strong>
                         </h2>
                         <div className='leading-10 text-[16px] text-justify'>
                             <p>
-                                Hello! I'm Aliyan Gohar, a Software Engineer passionate about frontend designs and UI.
-                                I focus on creating scalable, efficient, and innovative systems. My expertise covers cloud platforms
-                                (AWS, Azure), containerization (Docker, Kubernetes), and CI/CD pipelines, complemented by strong
-                                full-stack development skills. Currently pursuing a B.Tech in Computer Science Engineering at SRM
-                                Institute of Science and Technology, my hands-on experience spans a wide array of tools and platforms
-                                within the DevOps, Cloud, and ML ecosystems.
+                                I am a Computer Science student at SRM University and multilingual speaker with a passion for ethical hacking,
+                                artificial intelligence, and neural language processing. I am looking to join a company that values innovation, collaboration,
+                                and continuous learning and am confident that my enthusiasm and drive will help me succeed in any role that leverages my passion
+                                for technology.
                             </p>
                         </div>
                     </Col>

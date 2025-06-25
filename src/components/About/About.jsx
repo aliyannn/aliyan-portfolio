@@ -1,29 +1,18 @@
 import { Container, Row, Col } from "react-bootstrap"
-import AboutInfo from './AboutInfo'
 import Techstack from './Techstack'
 import Toolstack from './Toolstack'
+import ExperienceSection from "../ExperienceSection"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function About() {
     return (
-        <Container fluid className='pt-40 pb-20 text-justify'>
+        <Container fluid className='pt-30 pb-20 text-justify'>
             <Container>
                 <Row className='justify-center'>
-                    <Col md={7} className='justify-center'>
-                        <h1 className='heading text-center pb-10'>
-                            Get to <strong className='spanText'>Know Me</strong>
-                        </h1>
-                        <AboutInfo />
+                    <Col md={12} className='justify-center'>
+                        <ExperienceSection />
                     </Col>
-                    <Col md={5}>
-                        <DotLottieReact
-                            src="https://lottie.host/495c42b1-872c-49b1-82ff-f49e4e6bf19a/jtceaE8Zv2.lottie"
-                            loop
-                            autoplay
-                            height={800}
-                            width={800}
-                        />
-                    </Col>
+
                 </Row>
                 <h2 className="pt-20 pb-10 heading text-center">My <strong className="spanText">Tech Stack</strong></h2>
                 <Techstack />

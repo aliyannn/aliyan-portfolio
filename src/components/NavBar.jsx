@@ -35,7 +35,7 @@ function NavBar() {
         >
             <Container>
                 <Navbar.Brand href="/" className="d-flex">
-                    <span className="text-[var(--light-purple)] font-bold text-3xl">aliyan.</span>
+                    <Nav.Link as={Link} to="/"> <span className="text-[var(--light-purple)] font-bold text-3xl">aliyan.</span></Nav.Link>
                 </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"
