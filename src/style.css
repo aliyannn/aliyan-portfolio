@@ -545,7 +545,8 @@ p {
 /* Footer */
 .footer {
   background-color: #181a27;
-  padding-top: 10px !important;
+  padding-top: 15px !important;
+  padding-bottom: 5px !important;
   text-align: center;
 
   h3 {
@@ -647,9 +648,5 @@ p {
 
   .workExperience p {
     font-size: 14px;
-  }
-
-  .footer {
-    display: none;
   }
 }
