@@ -632,8 +632,4 @@ p {
   .workExperience p {
     font-size: 14px;
   }
-
-  .projectTechStack {
-    width: 10% !important;
-  }
 }

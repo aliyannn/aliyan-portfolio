@@ -18,9 +18,10 @@ function Projects() {
                                 "javascript.svg",
                                 "threejs.svg",
                                 "tailwind.svg",
-                                "vercel.png"
+                                "vercel.svg"
                             ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
+                            text="Personal portfolio showcasing Aliyan's software development work and skills. 
+                            Features responsive design, smooth animations, dynamic content, and social media integration."
                             ghLink="https://github.com/aliyannn/aliyan-portfolio"
                             demoLink="https://aliyannn.vercel.app/"
                         />
@@ -35,9 +36,10 @@ function Projects() {
                                 "javascript.svg",
                                 "threejs.svg",
                                 "tailwind.svg",
-                                "vercel.png"
+                                "vercel.svg"
                             ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
+                            text="Personal portfolio showcasing Aliyan's software development work and skills. 
+                            Features responsive design, smooth animations, dynamic content, and social media integration."
                             ghLink="https://github.com/aliyannn/aliyan-portfolio"
                             demoLink="https://aliyannn.vercel.app/"
                         />
@@ -52,60 +54,10 @@ function Projects() {
                                 "javascript.svg",
                                 "threejs.svg",
                                 "tailwind.svg",
-                                "vercel.png"
+                                "vercel.svg"
                             ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
-                            ghLink="https://github.com/aliyannn/aliyan-portfolio"
-                            demoLink="https://aliyannn.vercel.app/"
-                        />
-                    </Col>
-                    <Col md={4} className="projectCard">
-                        <ProjectCards
-                            img={chatify}
-                            title="Portfolio"
-                            images={[
-                                "vite.svg",
-                                "react.svg",
-                                "javascript.svg",
-                                "threejs.svg",
-                                "tailwind.svg",
-                                "vercel.png"
-                            ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
-                            ghLink="https://github.com/aliyannn/aliyan-portfolio"
-                            demoLink="https://aliyannn.vercel.app/"
-                        />
-                    </Col>
-                    <Col md={4} className="projectCard">
-                        <ProjectCards
-                            img={chatify}
-                            title="Portfolio"
-                            images={[
-                                "vite.svg",
-                                "react.svg",
-                                "javascript.svg",
-                                "threejs.svg",
-                                "tailwind.svg",
-                                "vercel.png"
-                            ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
-                            ghLink="https://github.com/aliyannn/aliyan-portfolio"
-                            demoLink="https://aliyannn.vercel.app/"
-                        />
-                    </Col>
-                    <Col md={4} className="projectCard">
-                        <ProjectCards
-                            img={chatify}
-                            title="Portfolio"
-                            images={[
-                                "vite.svg",
-                                "react.svg",
-                                "javascript.svg",
-                                "threejs.svg",
-                                "tailwind.svg",
-                                "vercel.png"
-                            ]}
-                            text="A fully responsive and visually dynamic portfolio built using React with Vite, styled with Tailwind CSS and enhanced by Three.js for immersive 3D animations. The project structure is optimized for performance and scalability across all devices."
+                            text="Personal portfolio showcasing Aliyan's software development work and skills. 
+                            Features responsive design, smooth animations, dynamic content, and social media integration."
                             ghLink="https://github.com/aliyannn/aliyan-portfolio"
                             demoLink="https://aliyannn.vercel.app/"
                         />
