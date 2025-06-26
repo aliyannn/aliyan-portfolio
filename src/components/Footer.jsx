@@ -20,24 +20,26 @@ function Footer() {
                         <h3>Copyright © {year} aliyan.</h3>
                     </Col>
                     <Col md={4} className="text-center">
-                        <ul className="text-2xl">
-                            <li className="inline-block pr-6">
+                        <ul className="mb-1">
+                            <li className="inline-block pr-6 grow">
                                 <a
                                     href="https://www.linkedin.com/in/allygohar/"
                                     target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer"
+                                >
                                     <FaLinkedin />
                                 </a>
                             </li>
-                            <li className="inline-block pr-6">
+                            <li className="inline-block pr-6 grow">
                                 <a
                                     href="https://github.com/aliyannn"
                                     target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer"
+                                >
                                     <FaGithub />
                                 </a>
                             </li>
-                            <li className="inline-block">
+                            <li className="inline-block grow">
                                 <a
                                     href="https://x.com/aliyan_gohar"
                                     target="_blank"

@@ -4,7 +4,7 @@ import MouseGradientButton from "./MouseGradientButton";
 function ProjectCards(props) {
     const techBgColors = {
         "react.svg": "bg-blue-800",
-        "javascript.svg": "bg-yellow-400",
+        "javascript.svg": "bg-yellow-300",
         "vite.svg": "bg-purple-500",
         "threejs.svg": "bg-gray-800",
         "tailwind.svg": "bg-blue-900",

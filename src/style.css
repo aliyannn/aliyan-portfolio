@@ -544,16 +544,32 @@ p {
 
 /* Footer */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: #181a27;
   padding-top: 10px !important;
   text-align: center;
-}
 
-.footer h3 {
-  font-size: 1em;
-  color: white !important;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
+  h3 {
+    font-size: 1em;
+    color: white !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  li {
+    font-size: 1.8rem;
+
+    a {
+      color: var(--light-purple) !important;
+    }
+
+    &.grow {
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
 /* Media Responsiveness */
@@ -624,12 +640,16 @@ p {
     width: 250px !important;
     height: 250px !important;
   }
-  
+
   .workExperience h1 {
     font-size: 2.28rem !important;
   }
 
   .workExperience p {
     font-size: 14px;
+  }
+
+  .footer {
+    display: none;
   }
 }
