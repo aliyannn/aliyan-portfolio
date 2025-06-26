@@ -1,54 +1,48 @@
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
-import { FaGithub } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
+import Card from "react-bootstrap/Card";
+import MouseGradientButton from "./MouseGradientButton";
 
 function ProjectCards(props) {
     return (
-        <Card className="projectCardView">
-            <Card.Img variant="top" src={props.img} alt="" />
-            <Card.Body>
-                <Card.Title className="text-white">{props.title}</Card.Title>
+        <Card className="projectCardView bg-[#0f0f0f] rounded-2xl overflow-hidden shadow-md items-center">
+            <Card.Img variant="top" src={props.img} alt="" className="object-cover w-full h-auto" />
 
-                <div className="flex flex-wrap justify-center text-center gap-4 my-4">
+            <Card.Body className="px-4 py-6 text-white">
+                <h3 className="text-xl font-semibold text-center mb-2">{props.title}</h3>
+
+                <div className="flex flex-wrap justify-center gap-3 my-4">
                     {props.images?.map((imageSrc, index) => (
                         <img
                             key={index}
                             src={imageSrc}
-                            alt={`project-${index}`}
-                            className="w-[10%] h-[auto] object-contain"
-                        ></img>
+                            alt={`project-tech-${index}`}
+                            className="w-[11%] h-auto object-contain projectTechStack"
+                        />
                     ))}
                 </div>
 
-                <Card.Text className="text-justify text-white">{props.text}</Card.Text>
-                <Button
-                    variant="primary"
-                    href={props.ghLink}
-                    target="_blank"
-                    style={{
-                        marginRight: "20px", fontSize: "14px", padding: "4px 30px", display: "inline-flex",
-                        justifyContent: "center", alignItems: "center", gap: "4px"
-                    }}
-                >
-                    <FaGithub />
-                    {"Github"}
-                </Button>
-                <Button
-                    variant="primary"
-                    href={props.demoLink}
-                    target="_blank"
-                    style={{
-                        marginRight: "20px", fontSize: "14px", padding: "4px 30px", display: "inline-flex",
-                        justifyContent: "center", alignItems: "center", gap: "4px"
-                    }}
-                >
-                    <CgWebsite />
-                    {"Demo"}
-                </Button>
+                <Card.Text className="text-sm text-gray-300 text-justify">
+                    {props.text}
+                </Card.Text>
+
+                <div className="flex justify-center flex-wrap gap-4 mt-6">
+                    {props.ghLink && (
+                        <MouseGradientButton
+                            href={props.ghLink}
+                            icon="github"
+                            text="Github"
+                        />
+                    )}
+                    {props.demoLink && (
+                        <MouseGradientButton
+                            href={props.demoLink}
+                            icon="demo"
+                            text="Demo"
+                        />
+                    )}
+                </div>
             </Card.Body>
         </Card>
-    )
+    );
 }
 
-export default ProjectCards
+export default ProjectCards;
