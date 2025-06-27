@@ -1,6 +1,6 @@
 import ProjectCards from "./ProjectCards";
 import { Container, Row, Col } from "react-bootstrap"
-import chatify from "../../assets/projects/chatify.png"
+import chatify from "../../assets/projects/chatify.webp"
 
 function Projects() {
     return (

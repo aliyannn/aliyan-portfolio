@@ -34,7 +34,7 @@ html,
       #050816 100%
     ),
     linear-gradient(to right, rgba(0, 0, 0, 0) 75%, #050816 100%),
-    url(./assets/herobg.png);
+    url(./assets/herobg.webp);
   background-size: cover;
   background-position: center;
   opacity: 0.6;

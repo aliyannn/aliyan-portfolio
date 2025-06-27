@@ -29,19 +29,12 @@ function ProjectCards(props) {
                                 <img
                                     src={imageSrc}
                                     alt={`tech-${index}`}
+                                    loading="lazy"
                                     className="p-2 projectTechStack object-contain"
                                 />
                             </div>
                         );
                     })}
-                    {/* {props.images?.map((imageSrc, index) => (
-                        <img
-                            key={index}
-                            src={imageSrc}
-                            alt={`project-tech-${index}`}
-                            className="w-[11%] h-auto object-contain projectTechStack"
-                        />
-                    ))} */}
                 </div>
 
                 <Card.Text className="text-sm text-gray-300 text-justify">

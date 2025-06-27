@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import myImg from "../../assets/aliyangohar image.png"
+import myImg from "../../assets/aliyangohar image.webp"
 import Tilt from "react-parallax-tilt"
 import {
     FaLinkedin,
@@ -32,14 +31,7 @@ function Intro() {
 
                     <Col md={5} className='p-0 flex justify-center items-center'>
                         <Tilt>
-                            <img src={myImg} alt="aliyan gohar" width={300} height={300} />
-                            {/* <DotLottieReact
-                                src="https://lottie.host/eed0e8c3-4aad-47ca-b576-309a77d3eb2f/iaxGTjlLAc.lottie"
-                                loop
-                                autoplay
-                                height={6000}
-                                width={6000}
-                            /> */}
+                            <img src={myImg} alt="Aliyan | Software Engineer | React Developer | WordPress Developer" loading="lazy" width={300} height={300} />
                         </Tilt>
                     </Col>
                 </Row>
