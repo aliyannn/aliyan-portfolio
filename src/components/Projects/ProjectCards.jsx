@@ -3,12 +3,12 @@ import MouseGradientButton from "./MouseGradientButton";
 
 function ProjectCards(props) {
     const techBgColors = {
-        "/public/techIcons/react.svg": "bg-blue-800",
-        "/public/techIcons/javascript.svg": "bg-yellow-300",
-        "/public/techIcons/vite.svg": "bg-purple-500",
-        "/public/techIcons/threejs.svg": "bg-gray-800",
-        "/public/techIcons/tailwind.svg": "bg-blue-900",
-        "/public/techIcons/vercel.svg": "bg-white",
+        "react.svg": "bg-blue-800",
+        "javascript.svg": "bg-yellow-300",
+        "vite.svg": "bg-purple-500",
+        "threejs.svg": "bg-gray-800",
+        "tailwind.svg": "bg-blue-900",
+        "vercel.svg": "bg-white",
     };
     return (
         <Card className="projectCardView bg-[#0f0f0f] rounded-2xl overflow-hidden shadow-md items-center">

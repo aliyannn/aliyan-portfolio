@@ -13,12 +13,12 @@ function Projects() {
                             img={chatify}
                             title="Portfolio"
                             images={[
-                                "/public/techIcons/vite.svg",
-                                "/public/techIcons/react.svg",
-                                "/public/techIcons/javascript.svg",
-                                "/public/techIcons/threejs.svg",
-                                "/public/techIcons/tailwind.svg",
-                                "/public/techIcons/vercel.svg"
+                                "vite.svg",
+                                "react.svg",
+                                "javascript.svg",
+                                "threejs.svg",
+                                "tailwind.svg",
+                                "vercel.svg"
                             ]}
                             text="Personal portfolio showcasing Aliyan's software development work and skills. 
                             Features responsive design, smooth animations, dynamic content, and social media integration."
@@ -31,12 +31,12 @@ function Projects() {
                             img={chatify}
                             title="Portfolio"
                             images={[
-                                "/public/techIcons/vite.svg",
-                                "/public/techIcons/react.svg",
-                                "/public/techIcons/javascript.svg",
-                                "/public/techIcons/threejs.svg",
-                                "/public/techIcons/tailwind.svg",
-                                "/public/techIcons/vercel.svg"
+                                "vite.svg",
+                                "react.svg",
+                                "javascript.svg",
+                                "threejs.svg",
+                                "tailwind.svg",
+                                "vercel.svg"
                             ]}
                             text="Personal portfolio showcasing Aliyan's software development work and skills. 
                             Features responsive design, smooth animations, dynamic content, and social media integration."
@@ -49,12 +49,12 @@ function Projects() {
                             img={chatify}
                             title="Portfolio"
                             images={[
-                               "/public/techIcons/vite.svg",
-                                "/public/techIcons/react.svg",
-                                "/public/techIcons/javascript.svg",
-                                "/public/techIcons/threejs.svg",
-                                "/public/techIcons/tailwind.svg",
-                                "/public/techIcons/vercel.svg"
+                                "vite.svg",
+                                "react.svg",
+                                "javascript.svg",
+                                "threejs.svg",
+                                "tailwind.svg",
+                                "vercel.svg"
                             ]}
                             text="Personal portfolio showcasing Aliyan's software development work and skills. 
                             Features responsive design, smooth animations, dynamic content, and social media integration."
