@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useCallback, useState } from "react";
 
 function SmokeEffect({ color = "#ffffff", particlesPerEmit = 2 }) {
