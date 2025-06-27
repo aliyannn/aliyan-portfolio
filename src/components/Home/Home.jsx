@@ -1,4 +1,4 @@
-import React from 'react'
+import { Helmet } from "react-helmet";
 import { Container, Row, Col } from 'react-bootstrap'
 import Button from "../Button"
 import Typewrite from './Typewrite'

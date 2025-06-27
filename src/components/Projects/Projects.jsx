@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import ProjectCards from "./ProjectCards";
 import { Container, Row, Col } from "react-bootstrap"
 import chatify from "../../assets/projects/chatify.webp"
