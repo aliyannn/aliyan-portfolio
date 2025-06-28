@@ -27,7 +27,7 @@ function Projects() {
                                     img={chatify}
                                     title="Portfolio"
                                     images={[
-                                        "vite.svg",
+                                        "/src/assets/techStack/vite.svg",
                                         "react.svg",
                                         "javascript.svg",
                                         "threejs.svg",
