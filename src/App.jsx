@@ -21,6 +21,14 @@ function App() {
     return () => clearTimeout(timer);
   }, [])
 
+  // Remove hash from the URL
+  useEffect(() => {
+    if (window.location.hash) {
+      window.scrollTo(0, 0)
+      window.history.replaceState(null, null, window.location.pathname)
+    }
+  }, [])
+
   return (
     <>
       <Preloader load={load} />

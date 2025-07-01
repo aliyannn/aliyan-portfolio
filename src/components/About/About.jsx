@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Container, Row, Col } from "react-bootstrap";
+import Intro from './Intro'
 import Techstack from './Techstack';
 import Toolstack from './Toolstack';
 import Experience from "./Experience";
@@ -18,7 +19,8 @@ function About() {
             </Helmet>
 
             <section id="about">
-                <Container fluid className='pt-40 text-justify'>
+                <Intro />
+                <Container fluid className='pt-30 text-justify'>
                     <Container>
                         <Row className='justify-center'>
                             <Col md={12} className='justify-center'>
@@ -26,7 +28,7 @@ function About() {
                             </Col>
                         </Row>
 
-                        <h2 className="lg:pt-30 md:pt-10 pb-10 heading text-center">
+                        <h2 className="pt-30 pb-10 heading text-center">
                             My <strong className="spanText">Tech Stack</strong>
                         </h2>
                         <Techstack />

@@ -36,7 +36,7 @@ function NavBar() {
         >
             <Container>
                 <Navbar.Brand className="d-flex">
-                    <a href="#home" onClick={handleNavClick} style={{textDecoration: 'none'}}>
+                    <a href="/" onClick={handleNavClick} style={{textDecoration: 'none'}}>
                         <span className="text-[var(--light-purple)] font-bold text-3xl">
                             aliyan.
                         </span>

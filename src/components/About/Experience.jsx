@@ -30,14 +30,14 @@ const experiences = [
         title: "Software Engineer Intern",
         company: "Developer's Alley",
         logo: "experience/DevelopersAlley.webp",
-        date: "May 2023 - May 2024",
+        date: "July 2022 - Sept 2022",
         description: "Completed courses in HTML, CSS, JavaScript, and React, built small JavaScript projects, and gained hands-on experience on a React project with a senior developer",
     },
 ];
 
 const Experience = () => {
     return (
-        <div className="text-white py-16 px-4">
+        <div className="text-white">
             <div className="text-center pb-10 workExperience">
                 <h1 className="">Work <span className="spanText">Experience</span></h1>
                 <p className="text-xl">Some of my recent work experience</p>

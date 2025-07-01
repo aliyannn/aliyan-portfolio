@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from "../Button";
 import Typewrite from './Typewrite';
-import Intro from './Intro'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { TbArrowUpRight } from "react-icons/tb";
 import Tilt from "react-parallax-tilt";
@@ -20,8 +19,8 @@ function Home() {
       </Helmet>
 
       <section>
-        <Container fluid className='pt-30 homeBg' id='home'>
-          <Container>
+        <Container fluid id='home'>
+          <Container className='pt-30 homeBg'>
             <Row className='align-items-center'>
               <Col md={7}>
                 <h1>
@@ -38,8 +37,8 @@ function Home() {
                   <Button variant='primary' href="https://www.linkedin.com/in/allygohar/">
                     Connect on Linkedin <TbArrowUpRight />
                   </Button>
-                  <Button variant='outline' href="/projects">
-                    View Projects
+                  <Button variant='outline' href="mailto:aliyangohar00@outlook.com">
+                    Hire Me!
                   </Button>
                 </div>
               </Col>
@@ -58,7 +57,6 @@ function Home() {
             </Row>
           </Container>
         </Container>
-        <Intro />
       </section>
     </>
   );
