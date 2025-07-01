@@ -21,10 +21,10 @@ function App() {
     return () => clearTimeout(timer);
   }, [])
 
-  // Remove hash from the URL
+  // Remove hash from the URL and scroll to top on page reload
   useEffect(() => {
     if (window.location.hash) {
-      window.scrollTo(0, 0)
+      window.scroll(0, 0)
       window.history.replaceState(null, null, window.location.pathname)
     }
   }, [])
