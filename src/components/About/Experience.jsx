@@ -6,36 +6,36 @@ import "react-vertical-timeline-component/style.min.css";
 
 const experiences = [
     {
-        title: "Sr. WordPress Developer",
-        company: "Calibre Media",
-        logo: "experience/Calibre-Media-Logo.png",
-        date: "Oct 2024 - Feb 2025",
+        title: "Software Engineer",
+        company: "Equinox Devs",
+        logo: "experience/equinoxdevs.webp",
+        date: "Sept 2024 - June 2025",
         description: "Responsible for developing and maintaining websites, managing e-commerce platforms, fixing backend issues.",
     },
     {
         title: "Software Engineer Intern",
         company: "Techlogix",
-        logo: "experience/techlogix.png",
-        date: "Jun 2024 - Aug 2024",
+        logo: "experience/techlogix.webp",
+        date: "June 2024 - Aug 2024",
         description: "I learned React.js and gained hands-on experience by contributing to senior developers’ projects.",
     },
     {
         title: "WordPress Developer",
         company: "Systechware",
-        logo: "experience/systechware.png",
+        logo: "experience/systechware.webp",
         date: "May 2023 - May 2024",
         description: "Creating and maintaining websites, managing full-scale e-commerce platforms, adding products, and fixing bugs in backend code and phpMyAdmin.",
     },
     {
         title: "Software Engineer Intern",
         company: "Developer's Alley",
-        logo: "experience/DevelopersAlley.png",
+        logo: "experience/DevelopersAlley.webp",
         date: "May 2023 - May 2024",
         description: "Completed courses in HTML, CSS, JavaScript, and React, built small JavaScript projects, and gained hands-on experience on a React project with a senior developer",
     },
 ];
 
-const ExperienceSection = () => {
+const Experience = () => {
     return (
         <div className="text-white py-16 px-4">
             <div className="text-center pb-10 workExperience">
@@ -74,4 +74,4 @@ const ExperienceSection = () => {
     );
 };
 
-export default ExperienceSection;
+export default Experience;
