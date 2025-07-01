@@ -7,6 +7,7 @@ import {
     AiOutlineHome,
     AiOutlineFundProjectionScreen,
     AiOutlineUser,
+    AiOutlineMobile
 } from "react-icons/ai";
 import { TbArrowUpRight } from "react-icons/tb";
 import resumePDF from "../assets/Aliyan-Gohar-Resume-Software-Engineer.pdf";
@@ -73,6 +74,14 @@ function NavBar() {
                             <Nav.Link href="#projects" onClick={handleNavClick}>
                                 <span className="nav-icon-text">
                                     <AiOutlineFundProjectionScreen className="nav-icon" /> Projects
+                                </span>
+                            </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Nav.Link href="#contact" onClick={handleNavClick}>
+                                <span className="nav-icon-text">
+                                    <AiOutlineMobile className="nav-icon" /> Contact
                                 </span>
                             </Nav.Link>
                         </Nav.Item>

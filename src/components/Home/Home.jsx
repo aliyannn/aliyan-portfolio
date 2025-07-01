@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from "../Button";
 import Typewrite from './Typewrite';
-import Intro from './Intro';
+import Intro from './Intro'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { TbArrowUpRight } from "react-icons/tb";
 import Tilt from "react-parallax-tilt";

@@ -4,6 +4,7 @@ import Preloader from "./components/PreLoader"
 import Home from './components/Home/Home'
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer"
 import ThreeBackground from "./components/ThreeBackground"
 import "./style.css"
@@ -20,8 +21,6 @@ function App() {
     return () => clearTimeout(timer);
   }, [])
 
-
-
   return (
     <>
       <Preloader load={load} />
@@ -31,6 +30,7 @@ function App() {
         <Home />
         <About />
         <Projects />
+        <Contact />
         <Footer />
       </div>
     </>

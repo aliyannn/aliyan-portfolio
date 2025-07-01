@@ -1,12 +1,6 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import myImg from "../../assets/aliyangohar image.webp"
 import Tilt from "react-parallax-tilt"
-import {
-    FaLinkedin,
-    FaGithub
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import myImg from "../../assets/aliyangohar image.webp"
 
 function Intro() {
     return (
@@ -33,44 +27,6 @@ function Intro() {
                         <Tilt>
                             <img src={myImg} alt="Aliyan | Software Engineer | React Developer | WordPress Developer" loading="lazy" width={300} height={300} />
                         </Tilt>
-                    </Col>
-                </Row>
-                <Row className='text-center text-white py-20'>
-                    <Col md={12}>
-                        <h2 className='heading text-center'>FIND ME ON</h2>
-                        <p>Feel free to <span className='spanText'>connect</span> with me</p>
-                        <ul className='homeSocialIconsList'>
-                            <li className='socialIcons'>
-                                <a
-                                    href="https://www.linkedin.com/in/allygohar/"
-                                    target='_blank'
-                                    rel="noopener noreferrer"
-                                    className='homeSocialIcons glow-animate'
-                                >
-                                    <FaLinkedin className='iconStyle' />
-                                </a>
-                            </li>
-                            <li className='socialIcons'>
-                                <a
-                                    href="https://github.com/aliyannn"
-                                    target='_blank'
-                                    rel="noopener noreferrer"
-                                    className='homeSocialIcons glow-animate'
-                                >
-                                    <FaGithub className='iconStyle' />
-                                </a>
-                            </li>
-                            <li className='socialIcons'>
-                                <a
-                                    href="https://x.com/aliyan_gohar"
-                                    target='_blank'
-                                    rel="noopener noreferrer"
-                                    className='homeSocialIcons glow-animate'
-                                >
-                                    <FaXTwitter className='iconStyle' />
-                                </a>
-                            </li>
-                        </ul>
                     </Col>
                 </Row>
             </Container>
