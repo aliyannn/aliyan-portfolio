@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -9,22 +9,22 @@ import {
     AiOutlineUser,
 } from "react-icons/ai";
 import { TbArrowUpRight } from "react-icons/tb";
-import { Link } from "react-router-dom";
-import resumePDF from "../assets/Aliyan-Gohar-Resume-Software-Engineer.pdf"
+import resumePDF from "../assets/Aliyan-Gohar-Resume-Software-Engineer.pdf";
 
 function NavBar() {
     const [expand, updateExpanded] = useState(false);
     const [navColor, setNavcolor] = useState(false);
 
-    function scrollHandler() {
-        if (window.scrollY >= 20) {
-            setNavcolor(true);
-        } else {
-            setNavcolor(false);
-        }
-    }
+    useEffect(() => {
+        const scrollHandler = () => {
+            setNavcolor(window.scrollY >= 20);
+        };
 
-    window.addEventListener("scroll", scrollHandler);
+        window.addEventListener("scroll", scrollHandler);
+        return () => window.removeEventListener("scroll", scrollHandler);
+    }, []);
+
+    const handleNavClick = () => updateExpanded(false);
 
     return (
         <Navbar
@@ -34,23 +34,27 @@ function NavBar() {
             className={navColor ? "stickyNav" : "navbar"}
         >
             <Container>
-                <Navbar.Brand href="/" className="d-flex">
-                    <Nav.Link as={Link} to="/"> <span className="text-[var(--light-purple)] font-bold text-3xl">aliyan.</span></Nav.Link>
+                <Navbar.Brand className="d-flex">
+                    <a href="#home" onClick={handleNavClick} style={{textDecoration: 'none'}}>
+                        <span className="text-[var(--light-purple)] font-bold text-3xl">
+                            aliyan.
+                        </span>
+                    </a>
                 </Navbar.Brand>
+
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"
-                    onClick={() => {
-                        updateExpanded(expand ? false : "expanded");
-                    }}
+                    onClick={() => updateExpanded(expand ? false : "expanded")}
                 >
                     <span></span>
                     <span></span>
                     <span></span>
                 </Navbar.Toggle>
+
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto flex align-items-center" defaultActiveKey="#home">
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+                            <Nav.Link href="#home" onClick={handleNavClick}>
                                 <span className="nav-icon-text">
                                     <AiOutlineHome className="nav-icon" /> Home
                                 </span>
@@ -58,7 +62,7 @@ function NavBar() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
+                            <Nav.Link href="#about" onClick={handleNavClick}>
                                 <span className="nav-icon-text">
                                     <AiOutlineUser className="nav-icon" /> About
                                 </span>
@@ -66,7 +70,7 @@ function NavBar() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/projects" onClick={() => updateExpanded(false)}>
+                            <Nav.Link href="#projects" onClick={handleNavClick}>
                                 <span className="nav-icon-text">
                                     <AiOutlineFundProjectionScreen className="nav-icon" /> Projects
                                 </span>
@@ -74,7 +78,12 @@ function NavBar() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Button variant="navbar" href={resumePDF} className="no-hover-underline" download>
+                            <Button
+                                variant="navbar"
+                                href={resumePDF}
+                                className="no-hover-underline"
+                                download
+                            >
                                 Resume
                                 <TbArrowUpRight />
                             </Button>

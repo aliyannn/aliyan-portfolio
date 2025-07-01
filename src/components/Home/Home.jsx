@@ -20,7 +20,7 @@ function Home() {
       </Helmet>
 
       <section>
-        <Container fluid className='pt-30' id='home'>
+        <Container fluid className='pt-30 homeBg' id='home'>
           <Container>
             <Row className='align-items-center'>
               <Col md={7}>
