@@ -59,7 +59,7 @@ const ContactForm = () => {
           <input
             {...register("from_name", { required: "Name is required" })}
             placeholder="Your Name"
-            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 mb-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.from_name && <p className="text-red-400">{errors.from_name.message}</p>}
 
@@ -70,7 +70,7 @@ const ContactForm = () => {
               pattern: { value: /^\S+@\S+$/i, message: "Invalid email" }
             })}
             placeholder="Your Email"
-            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 mb-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.from_email && <p className="text-red-400">{errors.from_email.message}</p>}
 
@@ -78,14 +78,14 @@ const ContactForm = () => {
             rows="5"
             {...register("message", { required: "Message is required" })}
             placeholder="Your Message"
-            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="w-full px-4 py-3 mb-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
           />
           {errors.message && <p className="text-red-400">{errors.message.message}</p>}
 
           <motion.button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-md relative overflow-hidden group"
+            className="w-full bg-[var(--electric-purple)] text-white font-semibold py-3 rounded relative overflow-hidden group"
             whileTap={{ scale: 0.98 }}
             whileHover={{ scale: 1.03 }}
           >
