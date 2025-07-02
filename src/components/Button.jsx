@@ -1,5 +1,3 @@
-
-// Button taking set of props
 const Button = ({
     children,
     variant = "default",

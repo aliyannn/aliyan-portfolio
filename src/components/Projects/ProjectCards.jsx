@@ -1,7 +1,6 @@
-import Card from "react-bootstrap/Card";
 import MouseGradientButton from "./MouseGradientButton";
 
-function ProjectCards(props) {
+function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
     const techBgColors = {
         "react.svg": "bg-blue-800",
         "javascript.svg": "bg-yellow-300",
@@ -17,55 +16,66 @@ function ProjectCards(props) {
         "nginx.svg": "bg-green-600",
         "elementor.svg": "bg-pink-800"
     };
+
     return (
-        <Card className="projectCardView bg-[#0f0f0f] rounded-2xl overflow-hidden shadow-md items-center">
-            <Card.Img variant="top" src={props.img} alt="" className="object-cover w-full h-auto" />
+        <div className="rounded-2xl backdrop-blur-7xl border-none bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden">
+            {/* Image Section */}
+            <div className="md:w-1/2 w-full flex justify-center items-center bg-transparent p-2">
+                <img
+                    src={img}
+                    alt={title}
+                    className="w-full max-w-xs h-auto object-cover md:max-w-full md:h-full"
+                />
+            </div>
 
-            <Card.Body className="px-4 py-6 text-white">
-                <h3 className="text-xl font-semibold text-center mb-2">{props.title}</h3>
+            {/* Content Section */}
+            <div className="md:w-1/2 w-full p-6 flex flex-col justify-center gap-4 text-white text-center md:text-left items-center md:items-start">
+                {/* Title */}
+                <h3 className="text-2xl font-bold">{title}</h3>
 
-                <div className="flex flex-wrap justify-center gap-2 my-4">
-                    {props.images?.map((imageSrc, index) => {
+                {/* Tech Stack */}
+                <div className="flex flex-wrap justify-center md:justify-start gap-2">
+                    {images?.map((imageSrc, index) => {
                         const bgColor = techBgColors[imageSrc] || "bg-gray-700";
-
                         return (
                             <div
                                 key={index}
-                                className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg ${bgColor} transition duration-300 hover:scale-110 shadow-md`}
+                                className={`w-9 h-9 flex items-center justify-center rounded-lg ${bgColor} transition duration-300 hover:scale-110 shadow-md`}
                             >
                                 <img
                                     src={imageSrc}
                                     alt={`tech-${index}`}
-                                    loading="lazy"
-                                    className="p-2 projectTechStack object-contain"
+                                    className="p-2 object-contain"
                                 />
                             </div>
                         );
                     })}
                 </div>
 
-                <Card.Text className="text-sm text-gray-300 text-justify">
-                    {props.text}
-                </Card.Text>
+                {/* Description */}
+                <p className="text-gray-300 text-sm text-justify md:text-left">
+                    {text}
+                </p>
 
-                <div className="flex justify-center flex-wrap gap-4 mt-6">
-                    {props.ghLink && (
+                {/* Buttons */}
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                    {ghLink && (
                         <MouseGradientButton
-                            href={props.ghLink}
+                            href={ghLink}
                             icon="github"
                             text="Github"
                         />
                     )}
-                    {props.demoLink && (
+                    {demoLink && (
                         <MouseGradientButton
-                            href={props.demoLink}
+                            href={demoLink}
                             icon="demo"
                             text="Demo"
                         />
                     )}
                 </div>
-            </Card.Body>
-        </Card>
+            </div>
+        </div>
     );
 }
 
