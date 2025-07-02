@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from "../Button";
 import Typewrite from './Typewrite';
@@ -9,15 +8,6 @@ import Tilt from "react-parallax-tilt";
 function Home() {
   return (
     <>
-      <Helmet>
-        <title>Aliyan Gohar | Frontend Developer Portfolio</title>
-        <meta
-          name="description"
-          content="Hi, I'm Aliyan Gohar – a frontend developer specializing in React, and modern web technologies. Explore my projects and experience."
-        />
-        <link rel="canonical" href="https://aliyannn.vercel.app/" />
-      </Helmet>
-
       <section>
         <Container fluid id='home'>
           <Container className='pt-30 homeBg'>

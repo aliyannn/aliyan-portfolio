@@ -1,55 +1,108 @@
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { Helmet } from "react-helmet";
-import FindMeOnSocials from "./FindMeOnSocials";
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-function Contact() {
+const ContactForm = () => {
+  const spotlightRef = useRef(null);
+  const formRef = useRef();
+  const [spotlight, setSpotlight] = useState({ x: 0, y: 0 });
+  const [loading, setLoading] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const rect = spotlightRef.current.getBoundingClientRect();
+    setSpotlight({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_h5nuv9b",
+        "template_fdmmvuq",
+        formRef.current,
+        "RMv4qHCq_hkg1gcVG"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully ✅");
+          formRef.current.reset();
+          setLoading(false);
+        },
+        (error) => {
+          console.error("Email send error:", error);
+          alert("Failed to send message ❌\n${error.text}");
+          setLoading(false);
+        }
+      );
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>Contact | Aliyan Gohar</title>
-        <meta
-          name="description"
-          content="Get in touch with Aliyan Gohar. Use the contact form to reach out about opportunities, collaborations, or questions."
+    <section
+      id="contact"
+      className="flex items-center justify-center px-4 py-24"
+    >
+      <motion.div
+        ref={spotlightRef}
+        onMouseMove={handleMouseMove}
+        className="relative w-full max-w-xl p-10 rounded-xl shadow-xl border border-white/10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div
+          className="pointer-events-none absolute -inset-px rounded-xl"
+          style={{
+            background: `radial-gradient(600px at ${spotlight.x}px ${spotlight.y}px, rgba(255,255,255,0.15), transparent 80%)`,
+          }}
         />
-        <link rel="canonical" href="https://aliyannn.vercel.app/#contact" />
-      </Helmet>
 
-      <section id="contact" className="pt-30">
-        <Container fluid>
-          <Container>
-            <h1 className="heading text-center mb-5">
-              <strong className="spanText">Let's</strong> Connect
-            </h1>
-            <Row className="justify-content-center">
-              <Col md={8}>
-                <Form action="https://formspree.io/f/your-form-id" method="POST">
-                  <Form.Group controlId="name" className="mb-3">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" name="name" required />
-                  </Form.Group>
+        <h2 className="text-3xl font-bold text-white text-center mb-6">Get in Touch</h2>
 
-                  <Form.Group controlId="email" className="mb-3">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" name="email" required />
-                  </Form.Group>
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+          <motion.input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.input
+            type="email"
+            name="from_email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+            className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            whileFocus={{ scale: 1.01 }}
+          ></motion.textarea>
 
-                  <Form.Group controlId="message" className="mb-4">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control as="textarea" name="message" rows={5} required />
-                  </Form.Group>
-
-                  <Button variant="primary" type="submit">
-                    Send Message
-                  </Button>
-                </Form>
-              </Col>
-            </Row>
-          </Container>
-        </Container>
-        <FindMeOnSocials />
-      </section>
-    </>
+          <motion.button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-md relative overflow-hidden group"
+            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></span>
+            <span className="relative z-10">
+              {loading ? "Sending..." : "Send Message"}
+            </span>
+          </motion.button>
+        </form>
+      </motion.div>
+    </section>
   );
-}
+};
 
-export default Contact;
+export default ContactForm;

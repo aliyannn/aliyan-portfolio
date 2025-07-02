@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import ProjectCards from "./ProjectCards";
 import { Container, Row, Col } from "react-bootstrap";
 import chatify from "../../assets/projects/chatify.webp";
@@ -6,15 +5,6 @@ import chatify from "../../assets/projects/chatify.webp";
 function Projects() {
     return (
         <>
-            <Helmet>
-                <title>Projects | Aliyan Gohar</title>
-                <meta
-                    name="description"
-                    content="Explore featured projects built by Aliyan Gohar using React, Vite, Three.js, Tailwind, and more."
-                />
-                <link rel="canonical" href="https://aliyannn.vercel.app/projects" />
-            </Helmet>
-
             <section id="projects" className="pt-30">
                 <Container>
                     <h1 className="heading text-center">

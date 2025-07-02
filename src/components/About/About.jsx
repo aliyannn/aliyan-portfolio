@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Container, Row, Col } from "react-bootstrap";
 import Intro from './Intro'
 import Techstack from './Techstack';
@@ -9,15 +8,6 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 function About() {
     return (
         <>
-            <Helmet>
-                <title>About | Aliyan Gohar</title>
-                <meta
-                    name="description"
-                    content="Learn more about Aliyan Gohar, a frontend developer skilled in React, TailwindCSS, Three.js, and modern tools. Explore his tech and tool stacks."
-                />
-                <link rel="canonical" href="https://aliyannn.vercel.app/about" />
-            </Helmet>
-
             <section id="about">
                 <Intro />
                 <Container fluid className='pt-30 text-justify'>
