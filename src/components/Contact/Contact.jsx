@@ -1,48 +1,42 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const spotlightRef = useRef(null);
-  const formRef = useRef();
   const [spotlight, setSpotlight] = useState({ x: 0, y: 0 });
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const handleMouseMove = (e) => {
     const rect = spotlightRef.current.getBoundingClientRect();
     setSpotlight({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     setLoading(true);
-
     emailjs
-      .sendForm(
-        "service_h5nuv9b",
-        "template_wa5w8vd",
-        formRef.current,
-        "RMv4qHCq_hkg1gcVG"
-      )
-      .then(
-        () => {
-          alert("Message sent successfully ✅");
-          formRef.current.reset();
-          setLoading(false);
-        },
-        (error) => {
-          console.error("Email send error:", error);
-          alert("Failed to send message ❌\n${error.text}");
-          setLoading(false);
-        }
-      );
+      .send("service_h5nuv9b", "template_wa5w8vd", data, "RMv4qHCq_hkg1gcVG")
+      .then(() => {
+        setLoading(false);
+        setSubmitted(true);
+        reset();
+        toast.success("Message sent successfully ✅");
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error("Something went wrong ❌");
+        console.error(err);
+      });
   };
 
   return (
-    <section
-      id="contact"
-      className="flex items-center justify-center px-4 py-24"
-    >
+    <section id="contact" className="flex items-center justify-center px-4 py-24">
       <motion.div
         ref={spotlightRef}
         onMouseMove={handleMouseMove}
@@ -61,31 +55,32 @@ const ContactForm = () => {
 
         <h2 className="text-3xl font-bold text-white text-center mb-6">Get in Touch</h2>
 
-        <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
-          <motion.input
-            type="text"
-            name="from_name"
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <input
+            {...register("from_name", { required: "Name is required" })}
             placeholder="Your Name"
-            required
             className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            whileFocus={{ scale: 1.02 }}
           />
-          <motion.input
+          {errors.from_name && <p className="text-red-400">{errors.from_name.message}</p>}
+
+          <input
             type="email"
-            name="from_email"
+            {...register("from_email", {
+              required: "Email is required",
+              pattern: { value: /^\S+@\S+$/i, message: "Invalid email" }
+            })}
             placeholder="Your Email"
-            required
             className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            whileFocus={{ scale: 1.02 }}
           />
-          <motion.textarea
-            name="message"
-            placeholder="Your Message"
+          {errors.from_email && <p className="text-red-400">{errors.from_email.message}</p>}
+
+          <textarea
             rows="5"
-            required
+            {...register("message", { required: "Message is required" })}
+            placeholder="Your Message"
             className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-            whileFocus={{ scale: 1.01 }}
-          ></motion.textarea>
+          />
+          {errors.message && <p className="text-red-400">{errors.message.message}</p>}
 
           <motion.button
             type="submit"
@@ -95,11 +90,35 @@ const ContactForm = () => {
             whileHover={{ scale: 1.03 }}
           >
             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></span>
-            <span className="relative z-10">
-              {loading ? "Sending..." : "Send Message"}
-            </span>
+            <span className="relative z-10">{loading ? "Sending..." : "Send Message"}</span>
           </motion.button>
         </form>
+
+        <AnimatePresence>
+          {submitted && (
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              className="flex justify-center mt-6"
+            >
+              <svg width="64" height="64" fill="none" viewBox="0 0 24 24" className="text-green-500">
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1 }}
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <ToastContainer position="top-right" autoClose={4000} />
       </motion.div>
     </section>
   );
