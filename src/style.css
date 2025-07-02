@@ -532,7 +532,7 @@ p {
   border-radius: 6px;
   color: white;
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 10px 30px;
   transition: 0.3s ease;
   box-shadow: var(--primary-purple) 0px 15px 15px -10px;
 }
@@ -596,6 +596,18 @@ p {
     line-height: 30px;
   }
 
+  #about h2 {
+    padding-top: 80px;
+  }
+
+  #projects {
+    padding-top: 80px;
+  }
+
+  #contact {
+    padding-top: 80px;
+  }
+
   .heading {
     font-size: 2rem !important;
   }
@@ -611,7 +623,7 @@ p {
   }
 
   .outlineButton {
-    padding: 10px 12px;
+    padding: 10px 25px;
     font-size: 13px;
   }
 

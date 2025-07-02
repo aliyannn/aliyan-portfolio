@@ -39,7 +39,7 @@ const Experience = () => {
     return (
         <div className="text-white">
             <div className="text-center pb-10 workExperience">
-                <h1 className="">Work <span className="spanText">Experience</span></h1>
+                <h1>Work <span className="spanText">Experience</span></h1>
                 <p className="text-xl">Some of my recent work experience</p>
             </div>
             <VerticalTimeline>

@@ -9,6 +9,13 @@ function ProjectCards(props) {
         "threejs.svg": "bg-gray-800",
         "tailwind.svg": "bg-blue-900",
         "vercel.svg": "bg-white",
+        "shopify.svg": "bg-green-900",
+        "wordpress.svg": "bg-blue-900",
+        "woocommerce.svg": "bg-purple-900",
+        "php.svg": "bg-purple-800",
+        "mysql.svg": "bg-orange-600",
+        "nginx.svg": "bg-green-600",
+        "elementor.svg": "bg-pink-800"
     };
     return (
         <Card className="projectCardView bg-[#0f0f0f] rounded-2xl overflow-hidden shadow-md items-center">
