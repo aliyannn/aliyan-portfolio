@@ -588,16 +588,12 @@ p {
   }
 
   #intro {
-    padding-top: 40px !important;
+    padding-top: 0px !important;
   }
 
   #intro p {
     font-size: 14px;
     line-height: 30px;
-  }
-
-  #about h2 {
-    padding-top: 80px;
   }
 
   #projects {
