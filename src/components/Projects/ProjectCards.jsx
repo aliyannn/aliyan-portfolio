@@ -1,4 +1,5 @@
 import MouseGradientButton from "./MouseGradientButton";
+import { motion } from "framer-motion";
 
 function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
     const techBgColors = {
@@ -18,15 +19,25 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
     };
 
     return (
-        <div className="rounded-2xl backdrop-blur-7xl border-none bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden">
-            {/* Image Section */}
-            <div className="md:w-1/2 w-full flex justify-center items-center bg-transparent p-2">
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="rounded-2xl backdrop-blur-2xl border border-white/10 bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden"
+        >
+            {/* Image Section with Hover Animation */}
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="md:w-1/2 w-full flex justify-center items-center bg-transparent p-4"
+            >
                 <img
                     src={img}
                     alt={title}
-                    className="w-full max-w-xs h-auto object-cover md:max-w-full md:h-full"
+                    className="w-full max-w-xs h-auto object-contain md:max-w-full md:h-full transition-transform duration-300"
                 />
-            </div>
+            </motion.div>
 
             {/* Content Section */}
             <div className="md:w-1/2 w-full p-6 flex flex-col justify-center gap-4 text-white text-center md:text-left items-center md:items-start">
@@ -75,7 +86,7 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
                     )}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
