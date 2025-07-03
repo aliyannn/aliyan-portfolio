@@ -24,7 +24,7 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="rounded-2xl backdrop-blur-2xl border border-white/10 bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden"
+            className="rounded-2xl backdrop-blur-7xl border-none bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden"
         >
             {/* Image Section with Hover Animation */}
             <motion.div
