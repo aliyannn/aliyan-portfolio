@@ -16,8 +16,8 @@ const projects = [
         title: "Digi Dukaan",
         images: ["wordpress.svg", "woocommerce.svg", "elementor.svg", "php.svg", "mysql.svg", "nginx.svg"],
         text: "Multi-vendor eCommerce platform built for Pakistanis. Features include user-friendly vendor dashboards, secure checkout, product management, and responsive design optimized for mobile and desktop.",
-        ghLink: "https://github.com/aliyannn/aliyan-portfolio",
-        demoLink: "https://aliyannn.vercel.app/"
+        ghLink: "",
+        demoLink: "https://digi-dukaan.com/"
     }
 ];
 

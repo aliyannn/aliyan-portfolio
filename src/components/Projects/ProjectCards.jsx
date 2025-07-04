@@ -1,7 +1,9 @@
-import MouseGradientButton from "./MouseGradientButton";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import MouseGradientButton from "./MouseGradientButton"
+import { LuSquareArrowOutUpRight } from "react-icons/lu";
 
-function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
+function ProjectCards({ img, title, images, text, ghLink, demoLink, index = 0 }) {
     const techBgColors = {
         "react.svg": "bg-blue-800",
         "javascript.svg": "bg-yellow-300",
@@ -15,7 +17,20 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
         "php.svg": "bg-purple-800",
         "mysql.svg": "bg-orange-600",
         "nginx.svg": "bg-green-600",
-        "elementor.svg": "bg-pink-800"
+        "elementor.svg": "bg-pink-800",
+    };
+
+    const [hovered, setHovered] = useState(false);
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
+    const btnRef = useRef(null);
+
+    const handleMouseMove = (e) => {
+        const rect = btnRef.current?.getBoundingClientRect();
+        if (!rect) return;
+        setCoords({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top,
+        });
     };
 
     return (
@@ -23,21 +38,60 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
             className="rounded-2xl backdrop-blur-7xl border-none bg-white/10 shadow-lg flex flex-col md:flex-row overflow-hidden"
         >
-            {/* Image Section with Hover Animation */}
-            <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="md:w-1/2 w-full flex justify-center items-center bg-transparent p-4"
+            {/* Image Section with Hover Overlay */}
+            <div
+                className="relative md:w-1/2 w-full flex justify-center items-center p-4"
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
             >
-                <img
-                    src={img}
-                    alt={title}
-                    className="w-full max-w-xs h-auto object-contain md:max-w-full md:h-full transition-transform duration-300"
-                />
-            </motion.div>
+                <div className="relative inline-block">
+                    <motion.img
+                        src={img}
+                        alt={title}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 200 }}
+                        className="object-contain w-full h-auto max-w-xs md:max-w-full transition-transform duration-300"
+                    />
+
+                    {/* Hover Overlay */}
+                    {demoLink && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: hovered ? 1 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center rounded-lg"
+                        >
+                            <motion.a
+                                href={demoLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ref={btnRef}
+                                onMouseMove={handleMouseMove}
+                                className="relative px-10 py-4 inline-flex items-center gap-2 text-white text-md font-semibold rounded-md overflow-hidden border border-white/20"
+                            >
+                                <motion.span
+                                    className="absolute inset-0 bg-gradient-to-br from-purple-500 via-blue-400 to-teal-500 opacity-30 rounded-full pointer-events-none"
+                                    style={{
+                                        left: coords.x,
+                                        top: coords.y,
+                                        transform: "translate(-50%, -50%)",
+                                    }}
+                                    animate={{
+                                        left: coords.x,
+                                        top: coords.y,
+                                    }}
+                                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                                />
+                                <LuSquareArrowOutUpRight />
+                                <span className="relative z-10">View Website</span>
+                            </motion.a>
+                        </motion.div>
+                    )}
+                </div>
+            </div>
 
             {/* Content Section */}
             <div className="md:w-1/2 w-full p-6 flex flex-col justify-center gap-4 text-white text-center md:text-left items-center md:items-start">
@@ -64,9 +118,7 @@ function ProjectCards({ img, title, images, text, ghLink, demoLink }) {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm text-justify md:text-left">
-                    {text}
-                </p>
+                <p className="text-gray-300 text-sm text-justify md:text-left">{text}</p>
 
                 {/* Buttons */}
                 <div className="flex flex-wrap justify-center md:justify-start gap-4">
