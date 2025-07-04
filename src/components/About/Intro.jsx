@@ -1,6 +1,9 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import Tilt from "react-parallax-tilt"
 import myImg from "../../assets/aliyangohar image.webp"
+import Button from "./Button";
+import { TbArrowUpRight } from "react-icons/tb";
+import resumePDF from "../assets/Aliyan Gohar Resume - Software Engineer.pdf";
 
 function Intro() {
     return (
@@ -21,6 +24,15 @@ function Intro() {
                                 relevant to your job requirements then do contact me.
                             </p>
                         </div>
+                        <Button
+                            variant="navbar"
+                            href={resumePDF}
+                            className="no-hover-underline"
+                            targetg="_blank"
+                        >
+                            Resume
+                            <TbArrowUpRight />
+                        </Button>
                     </Col>
 
                     <Col md={5} className='p-0 flex justify-center items-center'>
