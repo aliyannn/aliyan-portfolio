@@ -36,7 +36,7 @@ function NavBar() {
         >
             <Container>
                 <Navbar.Brand className="d-flex">
-                    <a href="/" onClick={handleNavClick} style={{textDecoration: 'none'}}>
+                    <a href="/" onClick={handleNavClick} style={{ textDecoration: 'none' }}>
                         <span className="text-[var(--light-purple)] font-bold text-3xl">
                             aliyan.
                         </span>
@@ -94,7 +94,7 @@ function NavBar() {
                                 targetg="_blank"
                             >
                                 Resume
-                                <TbArrowUpRight />
+                                <span className="arrow-icon"><TbArrowUpRight /></span>
                             </Button>
                         </Nav.Item>
                     </Nav>

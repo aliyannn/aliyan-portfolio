@@ -489,7 +489,7 @@ p {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px;
+  gap: 4px;
   text-decoration: none !important;
   line-height: 1;
   color: white !important;
@@ -506,6 +506,7 @@ p {
 
 /* Primary Button */
 .primaryButton {
+  position: relative;
   background-color: var(--primary-purple);
   color: white;
   padding: 10px 24px;
@@ -527,12 +528,17 @@ p {
 
 /* Outline Button */
 .outlineButton {
+  position: relative;
   background: transparent;
   border: 1px solid var(--primary-purple);
   border-radius: 6px;
   color: white;
   text-decoration: none;
   padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   transition: 0.3s ease;
   box-shadow: var(--primary-purple) 0px 15px 15px -10px;
 }
@@ -541,6 +547,21 @@ p {
   background-color: var(--primary-purple);
   color: white;
   box-shadow: none;
+}
+
+.arrow-icon {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.primaryButton:hover .arrow-icon,
+.outlineButton:hover .arrow-icon,
+.resumeButton:hover .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+.downloadButton:hover .arrow-icon {
+  transform: translate(0px, 2px);
 }
 
 /* Footer */

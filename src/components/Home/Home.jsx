@@ -25,7 +25,8 @@ function Home() {
 
                 <div className='text-left flex gap-4 pt-2'>
                   <Button variant='primary' href="https://www.linkedin.com/in/allygohar/">
-                    Connect on Linkedin <TbArrowUpRight />
+                    Connect on Linkedin
+                    <span className='arrow-icon'><TbArrowUpRight /></span>
                   </Button>
                   <Button variant='outline' href="mailto:aliyangohar00@outlook.com">
                     Hire Me!

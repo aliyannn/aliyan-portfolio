@@ -1,15 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import Tilt from "react-parallax-tilt"
 import myImg from "../../assets/aliyangohar image.webp"
-import Button from "./Button";
-import { TbArrowUpRight } from "react-icons/tb";
-import resumePDF from "../assets/Aliyan Gohar Resume - Software Engineer.pdf";
+import Button from "../Button";
+import { IoCodeDownload } from "react-icons/io5";
+import resumePDF from "../../assets/Aliyan Gohar Resume - Software Engineer.pdf";
 
 function Intro() {
     return (
         <Container fluid className='pt-30' id='intro'>
             <Container>
-                <Row className='text-white items-center'>
+                <Row className='text-white items-center text-left'>
                     <Col md={7}>
                         <h2 className='heading uppercase pb-4'>Get to
                             <strong className='flash-purple'> Know Me</strong>
@@ -25,13 +25,13 @@ function Intro() {
                             </p>
                         </div>
                         <Button
-                            variant="navbar"
+                            variant="outline"
                             href={resumePDF}
-                            className="no-hover-underline"
-                            targetg="_blank"
+                            className="no-hover-underline downloadButton"
+                            download
                         >
-                            Resume
-                            <TbArrowUpRight />
+                            Download Resume
+                            <span className='arrow-icon'><IoCodeDownload /></span>
                         </Button>
                     </Col>
 
