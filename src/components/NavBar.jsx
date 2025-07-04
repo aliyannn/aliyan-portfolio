@@ -91,7 +91,7 @@ function NavBar() {
                                 variant="navbar"
                                 href={resumePDF}
                                 className="no-hover-underline"
-                                download
+                                targetg="_blank"
                             >
                                 Resume
                                 <TbArrowUpRight />
