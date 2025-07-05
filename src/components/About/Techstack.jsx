@@ -44,9 +44,6 @@ function Techstack() {
                 <RiTailwindCssFill />
             </Col>
             <Col xs={4} md={2} className="techIcons">
-                <SiWoocommerce />
-            </Col>
-            <Col xs={4} md={2} className="techIcons">
                 <FaGithub />
             </Col>
             <Col xs={4} md={2} className="techIcons">
@@ -60,6 +57,9 @@ function Techstack() {
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <FaWordpress />
+            </Col>
+            <Col xs={4} md={2} className="techIcons">
+                <SiWoocommerce />
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <FaShopify />
