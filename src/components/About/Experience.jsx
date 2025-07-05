@@ -10,7 +10,7 @@ const experiences = [
         company: "Equinox Devs",
         logo: "experience/equinoxdevs.webp",
         date: "Sept 2024 - June 2025",
-        description: "Responsible for developing and maintaining websites, managing e-commerce platforms, fixing backend issues.",
+        description: "Developed interactive and responsive userinterfaces using React.JS forreal-time dashboards, landing pages, and product websites. Created reusable UI components, integrated 3D elements. Ensured pixel-perfect design implementation and optimized frontend performance.",
     },
     {
         title: "Software Engineer Intern",
