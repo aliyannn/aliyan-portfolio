@@ -16,6 +16,8 @@ import {
     FaHtml5,
     FaCss3
 } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiWoocommerce } from "react-icons/si";
 
 function Techstack() {
     return (
@@ -37,6 +39,12 @@ function Techstack() {
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <FaPython />
+            </Col>
+            <Col xs={4} md={2} className="techIcons">
+                <RiTailwindCssFill />
+            </Col>
+            <Col xs={4} md={2} className="techIcons">
+                <SiWoocommerce />
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <FaGithub />
