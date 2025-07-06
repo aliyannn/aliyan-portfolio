@@ -23,7 +23,7 @@ const projects = [
 
 const ProjectsCarousel = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 700,
         slidesToShow: 1,
