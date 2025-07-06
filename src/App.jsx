@@ -7,6 +7,8 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer"
 import ThreeBackground from "./components/ThreeBackground"
+import Kursor from "kursor"
+import "kursor/dist/kursor.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css"
@@ -30,6 +32,14 @@ function App() {
       window.history.replaceState(null, null, window.location.pathname)
     }
   }, [])
+
+  useEffect(()=>{
+    new Kursor({
+      type: 2,
+      removeDefaultCursor: true,
+      color: '#cd5ff8'
+    })
+  },[])
 
   return (
     <>
