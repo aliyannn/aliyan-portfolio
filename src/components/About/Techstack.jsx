@@ -1,8 +1,7 @@
 import { Row, Col } from "react-bootstrap"
 import { CgCPlusPlus } from "react-icons/cg";
 import {
-    DiJavascript1,
-    DiNodejs
+    DiJavascript1
 } from "react-icons/di";
 import { TbBrandThreejs } from "react-icons/tb";
 
@@ -27,9 +26,6 @@ function Techstack() {
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <DiJavascript1 />
-            </Col>
-            <Col xs={4} md={2} className="techIcons">
-                <DiNodejs />
             </Col>
             <Col xs={4} md={2} className="techIcons">
                 <TbBrandThreejs />
