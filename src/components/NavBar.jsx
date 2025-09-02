@@ -10,7 +10,7 @@ import {
     AiOutlineMobile
 } from "react-icons/ai";
 import { TbArrowUpRight } from "react-icons/tb";
-import resumePDF from "../assets/Aliyan Gohar Resume - Software Engineer.pdf";
+import resumePDF from "../assets/Aliyan Gohar - Software Engineer.pdf";
 
 function NavBar() {
     const [expand, updateExpanded] = useState(false);
