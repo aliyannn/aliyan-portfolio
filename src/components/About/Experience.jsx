@@ -7,11 +7,19 @@ import "react-vertical-timeline-component/style.min.css";
 const experiences = [
     {
         title: "Software Engineer",
-        company: "Equinox Devs",
-        logo: "experience/equinoxdevs.webp",
-        date: "Sept 2024 - June 2025",
+        company: "Calibre Media co.",
+        logo: "experience/CalibreMedia.webp",
+        date: "Nov 2024 - Aug 2025",
         techstack: ["react.svg", "vite.svg", "javascript.svg", "threejs.svg", "tailwind.svg"],
-        description: "Developed interactive and responsive userinterfaces using React.JS forreal-time dashboards, landing pages, and product websites. Created reusable UI components, integrated 3D elements. Ensured pixel-perfect design implementation and optimized frontend performance.",
+        description: "Developed interactive and responsive user-interfaces using React.JS for real-time dashboards, landing pages, and product websites. Created reusable UI components, integrated 3D elements. Ensured pixel-perfect design implementation and optimized frontend performance.",
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "Equinox Devs LLP.",
+        logo: "experience/equinoxdevs.webp",
+        date: "Sept 2024 - Nov 2025",
+        techstack: ["react.svg", "vite.svg", "javascript.svg", "tailwind.svg"],
+        description: "I learned React.js and other react states & APIs and gained hands-on experience by contributing to senior developers’ projects.",
     },
     {
         title: "Software Engineer Intern",
