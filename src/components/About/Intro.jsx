@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt"
 import myImg from "../../assets/aliyangohar image.webp"
 import Button from "../Button";
 import { IoCodeDownload } from "react-icons/io5";
-import resumePDF from "../../assets/Aliyan Gohar Resume - Software Engineer.pdf";
+import resumePDF from "../../assets/Aliyan Gohar - Software Engineer.pdf";
 
 function Intro() {
     return (
